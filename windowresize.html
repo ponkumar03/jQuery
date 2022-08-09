@@ -1,0 +1,15 @@
+<html>
+    <head>Window Resize</head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+     $(document).ready(function(){
+        let x=0;
+        $(window).resize(function(){
+            $("span").text(x+=1);
+        });
+     });
+    </script>
+    <body>
+        <p>window is resize <span> 0 </span>times</p>
+    </body>
+</html>

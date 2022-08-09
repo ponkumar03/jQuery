@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Change Form</title>
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <select name="actors" id="se">
+      <option>ram</option>
+      <option>ravi</option>
+      <option selected="selected">kumar</option>
+      <option>valen</option>
+      <option>raj</option>
+      <option>durai</option>
+    </select>
+    <div id="loc"></div>
+    <script>
+      $("select").change(function () {
+        document.getElementById("loc").innerHTML =
+          "You selected: " + document.getElementById("se").value;
+      });
+    </script>
+  </body>
+</html>

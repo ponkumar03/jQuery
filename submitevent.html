@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Event</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <p>Type'javatpoint' to submit finally</p>
+    <form action="javascript:alert('success');">
+        <div>
+            <input type="text">
+            <input type="submit">
+        </div>
+    </form>
+    <span></span>
+    <script>
+        $("form").submit(function(Event){
+        if($("input:first").val()==="javatpoint"){
+            $("span").text("submited successfuly").show();
+            return;
+        }
+        $("span").text("Not valid!").show().fadeOut(2000)
+        event.preventDefault();
+        })
+    </script>
+</body>
+</html>
